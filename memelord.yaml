@@ -26,11 +26,11 @@ spec:
           ports:
             - name: http
               containerPort: 8000
-          volumeMounts:
-            - mountPath: /opt/app/myproject/settings.py
-              name: settings
-              readOnly: true
-              subPath: settings.py
+          #volumeMounts:
+          #  - mountPath: /opt/app/myproject/settings.py
+          #    name: settings
+          #    readOnly: true
+          #    subPath: settings.py
           env:
             - name: DOMAIN
               value: "localhost,memelord-hirmus.ee-lte-1.codemowers.io"
@@ -87,6 +87,8 @@ spec:
               value: https://minio.ee-lte-1.codemowers.io/
             - name: AWS_LOCATION
               value: ""
+            - name: AWS_S3_ADDRESSING_STYLE
+              value: path
             - name: DEBUG
               value: "True"
             - name: SECURE_COOKIES
