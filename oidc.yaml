@@ -1,0 +1,19 @@
+---
+apiVersion: codemowers.cloud/v1beta1
+kind: OIDCClient
+metadata:
+  name: memelord-hirmus
+spec:
+  displayName: Memelord Hirmus
+  uri: https://memelord-hirmus.ee-lte-1.codemowers.io/
+  redirectUris:
+    - https://memelord-hirmus.ee-lte-1.codemowers.io/oidc/callback/
+  grantTypes:
+    - authorization_code
+    - refresh_token
+  responseTypes:
+    - code
+  availableScopes:
+    - openid
+    - profile
+  pkce: false
