@@ -12,13 +12,13 @@ spec:
       labels:
         app: memelord
     spec:
-      volumes:
-      - name: settings
-        projected:
-          defaultMode: 420
-          sources:
-          - configMap:
-              name: settings
+      #volumes:
+      #- name: settings
+      #  projected:
+      #    defaultMode: 420
+      #    sources:
+      #    - configMap:
+      #        name: settings
       containers:
         - name: memelord
           image: ghcr.io/l4rm4nd/memelord:latest
