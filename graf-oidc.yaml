@@ -1,0 +1,23 @@
+apiVersion: codemowers.cloud/v1beta1
+kind: OIDCClient
+metadata:
+  name: grafana-hirmus
+spec:
+  allowedGroups:
+  - github.com:codemowers:admins
+  availableScopes:
+  - openid
+  - profile
+  - groups
+  displayName: Granafa Hirmus
+  grantTypes:
+  - authorization_code
+  - refresh_token
+  overrideIncomingScopes: false
+  pkce: true
+  redirectUris:
+  - https://grafana-hirmus.ee-lte-1.codemowers.io/login/generic_oauth
+  responseTypes:
+  - code
+  tokenEndpointAuthMethod: none
+  uri: https://grafana-hirmus.ee-lte-1.codemowers.io/
